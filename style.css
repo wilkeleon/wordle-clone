@@ -1,22 +1,60 @@
-*,
-* ::before,
-*::after {
-  box-sizing: border-box;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  line-height: 1.5;
-}
-
+/* styles.css */
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f8f9fa;
+}
+
+.container {
+  text-align: center;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(5, 50px);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tile {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.correct {
+  background-color: #6aaa64;
+  color: white;
+}
+
+.present {
+  background-color: #c9b458;
+  color: white;
+}
+
+.absent {
+  background-color: #787c7e;
+  color: white;
+}
+
+#guessInput {
+  padding: 10px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  width: 260px;
 }
 
 button {
-  border: none;
-  background: none;
-  cursor: pointer;
-  font-family: inherit;
+  padding: 10px 20px;
+  font-size: 1rem;
+  margin-top: 10px;
 }
